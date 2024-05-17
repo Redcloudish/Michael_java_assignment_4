@@ -1,0 +1,4 @@
+Human Dagger Leather
+195 121 86
+Elf Sword Chainmail
+70 50 360

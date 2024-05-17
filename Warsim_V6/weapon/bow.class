@@ -1,0 +1,27 @@
+package weapon;
+
+public class Bow extends Weapon {
+   private int damageAmount = 100;
+   private int dexterityCost = 50;
+   private int hitPercentage = 80;
+
+   public Bow(String var1) {
+      super.setDamageAmount(this.damageAmount);
+      super.setDexterityCost(this.dexterityCost);
+      super.setWeaponType(var1);
+   }
+
+   public int shoot(int var1, int var2, int var3, int var4) {
+      int var5 = 0;
+      int var6 = super.randNum.nextInt(100) + 1;
+      if (var6 <= this.hitPercentage + (var4 - this.dexterityCost) / 10 - var2 * 5) {
+         if (var2 == 2) {
+            var5 = this.damageAmount + var3 / 10 + 2 - var1;
+         } else {
+            var5 = this.damageAmount + var3 / 20 - var1;
+         }
+      }
+
+      return var5;
+   }
+}
